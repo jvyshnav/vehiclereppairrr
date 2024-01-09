@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AdminUser extends StatefulWidget {
-  const AdminUser({super.key});
-
+  const AdminUser({super.key, required this.id});
+  final id;
   @override
   State<AdminUser> createState() => _AdminUserState();
 }
@@ -26,9 +25,13 @@ class _AdminUserState extends State<AdminUser> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      children: [IconButton(onPressed: () {
-                        Navigator.of(context).pop();
-                      }, icon: Icon(Icons.arrow_back_ios))],
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            icon: Icon(Icons.arrow_back_ios))
+                      ],
                     ),
                   ),
                   Row(
@@ -41,7 +44,8 @@ class _AdminUserState extends State<AdminUser> {
                             width: 150.w,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
-                                    image: AssetImage("assets/officedp.jpg"), fit: BoxFit.fill),
+                                    image: AssetImage("assets/officedp.jpg"),
+                                    fit: BoxFit.fill),
                                 borderRadius: BorderRadius.circular(130),
                                 color: Colors.grey),
                           ),
@@ -85,6 +89,7 @@ class _AdminUserState extends State<AdminUser> {
                         width: 290.w,
                         height: 50.h,
                         child: TextFormField(
+                            readOnly: true,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
                                 hintText: "  Username",
@@ -167,8 +172,9 @@ class _AdminUserState extends State<AdminUser> {
                     ],
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(top: 130.h),
-                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    padding: EdgeInsets.only(top: 130.h),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           width: 150.w,

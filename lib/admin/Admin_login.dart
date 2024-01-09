@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vehicle_project/admin/Admin_home_User.dart';
 
 class Adminlogin extends StatefulWidget {
   const Adminlogin({super.key});
@@ -10,9 +11,21 @@ class Adminlogin extends StatefulWidget {
 }
 
 class _AdminloginState extends State<Adminlogin> {
+  var Name = TextEditingController();
+  var Pass = TextEditingController();
+  Login() {
+    if (Name.text == 'vyshnav123' && Pass.text == '12345') {
+      Navigator.push(context, MaterialPageRoute(
+        builder: (context) {
+          return AdminHomeuser();
+        },
+      ));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
         backgroundColor: Color(0xffCFE2FF),
         body: SingleChildScrollView(
           child: Column(
@@ -45,7 +58,7 @@ class _AdminloginState extends State<Adminlogin> {
                     child: Text(
                       "LOGIN",
                       style:
-                      TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
                     ),
                   )
                 ],
@@ -57,7 +70,7 @@ class _AdminloginState extends State<Adminlogin> {
                     Text(
                       "Enter username",
                       style:
-                      TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                     )
                   ],
                 ),
@@ -71,6 +84,7 @@ class _AdminloginState extends State<Adminlogin> {
                       width: 290.w,
                       height: 50.h,
                       child: TextFormField(
+                          controller: Name,
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: "  Username",
@@ -106,6 +120,7 @@ class _AdminloginState extends State<Adminlogin> {
                       width: 290.w,
                       height: 50.h,
                       child: TextFormField(
+                          controller: Pass,
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: "  Enter Password",
@@ -117,7 +132,6 @@ class _AdminloginState extends State<Adminlogin> {
                   ],
                 ),
               ),
-
               Padding(
                 padding: EdgeInsets.only(top: 90.h),
                 child: Row(
@@ -127,7 +141,9 @@ class _AdminloginState extends State<Adminlogin> {
                       width: 190.w,
                       height: 50.h,
                       child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Login();
+                          },
                           child: Text(
                             "LOGIN",
                             style: TextStyle(color: Colors.white),
@@ -139,7 +155,6 @@ class _AdminloginState extends State<Adminlogin> {
                   ],
                 ),
               ),
-             
             ],
           ),
         ));

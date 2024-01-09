@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,30 +16,51 @@ class _UserListState extends State<UserList> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFE7F0FF),
-      body: ListView.builder(
-        shrinkWrap: true,
-        itemCount: 6,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(
-              top: 10,
-            ).r,
-            child: ListTile(onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return AdminUser();
-              },));
+      body: FutureBuilder(
+        future: FirebaseFirestore.instance.collection("Usercollection").get(),
+        builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+          if (snapshot.hasError) {
+            return Center(
+              child: Text("Error:${snapshot.error}"),
+            );
+          }
+          final user = snapshot.data?.docs ?? [];
+          return ListView.builder(
+            shrinkWrap: true,
+            itemCount: user.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(
+                  4,
+                ).r,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return AdminUser(id: user[index].id);
+                      },
+                    ));
+                  },
+                  child: ListTile(
+                    tileColor: Colors.white,
+                    leading: Image.asset('assets/dp.png'),
+                    title: Text(user[index]["username"]),
+                    subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(user[index]["phone"]),
+                          Text(user[index]["email"]),
+                          Text(user[index]["password"]),
+                        ]),
+                  ),
+                ),
+              );
             },
-              tileColor: Colors.white,
-              leading: Image.asset('assets/dp.png'),
-              title: Text('Name'),
-              subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Location'),
-                    Text('Mobile Number'),
-                    Text('Email')
-                  ]),
-            ),
           );
         },
       ),

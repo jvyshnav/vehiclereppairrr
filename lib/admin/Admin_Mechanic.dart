@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AdminMechanic extends StatefulWidget {
-  const AdminMechanic({super.key});
-
+  const AdminMechanic({super.key, required this.id});
+  final id;
   @override
   State<AdminMechanic> createState() => _AdminMechanicState();
 }
@@ -27,7 +26,13 @@ class _AdminMechanicState extends State<AdminMechanic> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      children: [Icon(Icons.arrow_back_ios)],
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            icon: Icon(Icons.arrow_back_ios))
+                      ],
                     ),
                   ),
                   Row(
@@ -40,7 +45,8 @@ class _AdminMechanicState extends State<AdminMechanic> {
                             width: 120.w,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
-                                    image: AssetImage("assets/officedp.jpg"), fit: BoxFit.fill),
+                                    image: AssetImage("assets/officedp.jpg"),
+                                    fit: BoxFit.fill),
                                 borderRadius: BorderRadius.circular(130),
                                 color: Colors.grey),
                           ),
@@ -50,17 +56,17 @@ class _AdminMechanicState extends State<AdminMechanic> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600, fontSize: 18)),
                           ),
-                          Row(mainAxisAlignment: MainAxisAlignment.center,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               RatingBar.builder(
                                   initialRating: 3,
                                   itemCount: 5,
                                   itemSize: 20,
                                   direction: Axis.horizontal,
-                                  itemBuilder: (Context, _) => Icon(Icons.star,color: Colors.amber),
-                                  onRatingUpdate: (rating) {
-
-                                  }),
+                                  itemBuilder: (Context, _) =>
+                                      Icon(Icons.star, color: Colors.amber),
+                                  onRatingUpdate: (rating) {}),
                             ],
                           ),
                           Padding(
@@ -281,8 +287,9 @@ class _AdminMechanicState extends State<AdminMechanic> {
 
                   //button
                   Padding(
-                    padding:  EdgeInsets.only(top: 20.h,bottom: 50.h),
-                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    padding: EdgeInsets.only(top: 20.h, bottom: 50.h),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           width: 150.w,
