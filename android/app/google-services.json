@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "496201691827",
-    "project_id": "vehicle1-8cb44",
-    "storage_bucket": "vehicle1-8cb44.appspot.com"
+    "project_number": "479438873302",
+    "project_id": "vehiclerepair-95963",
+    "storage_bucket": "vehiclerepair-95963.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:496201691827:android:1a1b0cb89aff4086c7b6c6",
+        "mobilesdk_app_id": "1:479438873302:android:be0642bac44c03f46e1f77",
         "android_client_info": {
           "package_name": "com.example.vehicle_project"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAB-dMnWTxrrsIsuwgkB80hRI-qnpNx1Mo"
+          "current_key": "AIzaSyC46fo-KcO09CNa53Tm_roAF1wwCiZtXBo"
         }
       ],
       "services": {

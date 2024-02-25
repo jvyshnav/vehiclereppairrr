@@ -1,7 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vehicle_project/admin/Admin_home_User.dart';
+
+import 'Admin_home_User.dart';
 
 class Adminlogin extends StatefulWidget {
   const Adminlogin({super.key});
@@ -13,8 +15,8 @@ class Adminlogin extends StatefulWidget {
 class _AdminloginState extends State<Adminlogin> {
   var Name = TextEditingController();
   var Pass = TextEditingController();
-  Login() {
-    if (Name.text == 'vyshnav123' && Pass.text == '12345') {
+  login() {
+    if (Name.text == 'admin@gmail.com' && Pass.text == '123') {
       Navigator.push(context, MaterialPageRoute(
         builder: (context) {
           return AdminHomeuser();
@@ -56,7 +58,7 @@ class _AdminloginState extends State<Adminlogin> {
                       20,
                     ),
                     child: Text(
-                      "LOGIN",
+                      "ADMIN LOGIN",
                       style:
                           TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
                     ),
@@ -142,7 +144,7 @@ class _AdminloginState extends State<Adminlogin> {
                       height: 50.h,
                       child: TextButton(
                           onPressed: () {
-                            Login();
+                            login();
                           },
                           child: Text(
                             "LOGIN",

@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBugC40ZPZzrFh-M2EoJgweUKKvfEdny4o</string>
+	<string>AIzaSyD2cSiaXY0fgFYwn9AmTUPzbgXquuIELFk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>496201691827</string>
+	<string>479438873302</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.vehicleProject</string>
 	<key>PROJECT_ID</key>
-	<string>vehicle1-8cb44</string>
+	<string>vehiclerepair-95963</string>
 	<key>STORAGE_BUCKET</key>
-	<string>vehicle1-8cb44.appspot.com</string>
+	<string>vehiclerepair-95963.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:496201691827:ios:a4209534a05d1655c7b6c6</string>
+	<string>1:479438873302:ios:8d0f5888807d06ee6e1f77</string>
 </dict>
 </plist>

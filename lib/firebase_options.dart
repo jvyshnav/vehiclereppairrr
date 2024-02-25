@@ -44,38 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBUcc-3RqyvFbLhi6dENWEYzdzdqfuV9WQ',
-    appId: '1:496201691827:web:7d1d7aae23fc887bc7b6c6',
-    messagingSenderId: '496201691827',
-    projectId: 'vehicle1-8cb44',
-    authDomain: 'vehicle1-8cb44.firebaseapp.com',
-    storageBucket: 'vehicle1-8cb44.appspot.com',
-    measurementId: 'G-Q0RZDB5EZD',
+    apiKey: 'AIzaSyDpxViBHCfBMiRABHipLopfG5XTpGjFClg',
+    appId: '1:479438873302:web:71734f4e5350cd4e6e1f77',
+    messagingSenderId: '479438873302',
+    projectId: 'vehiclerepair-95963',
+    authDomain: 'vehiclerepair-95963.firebaseapp.com',
+    storageBucket: 'vehiclerepair-95963.appspot.com',
+    measurementId: 'G-YWZ7F7Y6ME',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAB-dMnWTxrrsIsuwgkB80hRI-qnpNx1Mo',
-    appId: '1:496201691827:android:1a1b0cb89aff4086c7b6c6',
-    messagingSenderId: '496201691827',
-    projectId: 'vehicle1-8cb44',
-    storageBucket: 'vehicle1-8cb44.appspot.com',
+    apiKey: 'AIzaSyC46fo-KcO09CNa53Tm_roAF1wwCiZtXBo',
+    appId: '1:479438873302:android:be0642bac44c03f46e1f77',
+    messagingSenderId: '479438873302',
+    projectId: 'vehiclerepair-95963',
+    storageBucket: 'vehiclerepair-95963.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBugC40ZPZzrFh-M2EoJgweUKKvfEdny4o',
-    appId: '1:496201691827:ios:a4209534a05d1655c7b6c6',
-    messagingSenderId: '496201691827',
-    projectId: 'vehicle1-8cb44',
-    storageBucket: 'vehicle1-8cb44.appspot.com',
+    apiKey: 'AIzaSyD2cSiaXY0fgFYwn9AmTUPzbgXquuIELFk',
+    appId: '1:479438873302:ios:8d0f5888807d06ee6e1f77',
+    messagingSenderId: '479438873302',
+    projectId: 'vehiclerepair-95963',
+    storageBucket: 'vehiclerepair-95963.appspot.com',
     iosBundleId: 'com.example.vehicleProject',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBugC40ZPZzrFh-M2EoJgweUKKvfEdny4o',
-    appId: '1:496201691827:ios:8a373175552b0aa9c7b6c6',
-    messagingSenderId: '496201691827',
-    projectId: 'vehicle1-8cb44',
-    storageBucket: 'vehicle1-8cb44.appspot.com',
+    apiKey: 'AIzaSyD2cSiaXY0fgFYwn9AmTUPzbgXquuIELFk',
+    appId: '1:479438873302:ios:5603d41eca8cd5476e1f77',
+    messagingSenderId: '479438873302',
+    projectId: 'vehiclerepair-95963',
+    storageBucket: 'vehiclerepair-95963.appspot.com',
     iosBundleId: 'com.example.vehicleProject.RunnerTests',
   );
 }
